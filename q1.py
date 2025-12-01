@@ -1,4 +1,5 @@
 from scapy.all import *
+import scapy.all as scapy
 from collections import Counter
 
 packets = rdpcap("captura1.pcap")
@@ -7,6 +8,12 @@ packets = rdpcap("captura1.pcap")
 
 src_ips = Counter()
 dst_ips = Counter()
+
+#descobrir o tipo de comunicação
+
+for p in packets:
+    print(p.summary())
+
 # iterando pelos pacotes e contabilidando informa¸c~oes de IP
 for packet in packets:
     if packet.haslayer("IP"):
