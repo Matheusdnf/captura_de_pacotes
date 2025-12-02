@@ -23,7 +23,7 @@ for i, packet in enumerate(packets):
         
     if packet.haslayer("UDP"):  
         packet_udp['UDP'] += 1  
-        
+
     print(f"Pacote {i+1}: {packet.summary()}")
 
 
@@ -31,8 +31,7 @@ for i, packet in enumerate(packets):
 print("IPs de origem:")
 for ip, count in src_ips.items():
     print(f"{ip}: {count} pacotes")
-    print("IPs de destino:")
-
+print("IPs de destino:")
 for ip, count in dst_ips.items():
     print(f"{ip}: {count} pacotes")
 

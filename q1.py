@@ -23,7 +23,7 @@ for packet in packets:
 print("IPs de origem:")
 for ip, count in src_ips.items():
     print(f"{ip}: {count} pacotes")
-    print("IPs de destino:")
 
+print("IPs de destino:")
 for ip, count in dst_ips.items():
     print(f"{ip}: {count} pacotes")
